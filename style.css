@@ -7,7 +7,81 @@
           Amiri (Arabic)
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@300;400;500&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap');
+/* ── LOCAL FONTS ── */
+@font-face {
+  font-family: 'Kepler Std';
+  src: url('fonts/KeplerStdLight.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Kepler Std';
+  src: url('fonts/KeplerStdLightIt.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Kepler Std';
+  src: url('fonts/KeplerStdDisp.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Kepler Std';
+  src: url('fonts/KeplerStdItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Kepler Std';
+  src: url('fonts/KeplerStdBold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Kepler Std';
+  src: url('fonts/KeplerStdBoldIt.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Kepler Std';
+  src: url('fonts/KeplerStdBlack.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Kepler Std';
+  src: url('fonts/KeplerStdBlackIt.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'GE Elegant';
+  src: url('fonts/GEElegant.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GE Elegant';
+  src: url('fonts/GEElegant-Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'GE Elegant';
+  src: url('fonts/GEElegantMedium-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GE Elegant';
+  src: url('fonts/GE_Elegant_Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+/* IBM Plex Sans from Google as secondary (no local file needed) */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&display=swap');
 
 :root {
   --chalk:    #F5F0E8;
@@ -18,9 +92,9 @@
   --orange:   #E8935A;
   --white:    #FFFFFF;
 
-  --font-primary: 'Playfair Display', Georgia, serif;
+  --font-primary: 'Kepler Std', Georgia, serif;
   --font-secondary: 'IBM Plex Sans', sans-serif;
-  --font-arabic: 'Amiri', serif;
+  --font-arabic: 'GE Elegant', serif;
 
   --max-width: 1100px;
   --section-pad: 6rem 2rem;
@@ -536,4 +610,30 @@ footer .footer-logo img { height: 32px; filter: brightness(0) invert(1); opacity
   }
   .nav-links.open { display: flex; }
   .hamburger { display: flex; z-index: 101; }
+}
+
+/* ── PATTERN & ILLUSTRATION UTILITIES ── */
+.pattern-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.dantelle-divider {
+  overflow: hidden;
+  line-height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.dantelle-divider img {
+  width: 100%;
+  height: 36px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Floating illustration accents */
+.illustration-accent {
+  pointer-events: none;
+  user-select: none;
 }
