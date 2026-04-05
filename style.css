@@ -677,3 +677,29 @@ footer .footer-logo img { height: 32px; filter: brightness(0) invert(1); opacity
     text-align: center;
   }
 }
+
+/* ── EVIL EYE ACCENT ── */
+.evil-eye-accent {
+  text-align: center;
+  margin-top: 1.25rem;
+  padding-bottom: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  /* Hide on mobile — too conspicuous and layout breaks */
+  .evil-eye-accent {
+    display: none;
+  }
+}
+
+/* ── ABOUT PAGE: fix grid so Evil Eye div doesn't push text ── */
+.about-bio .section-inner {
+  align-items: start;
+}
+
+/* Left column (image + evil eye) should not stretch to push text */
+.about-bio .section-inner > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
