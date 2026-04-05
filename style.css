@@ -637,3 +637,43 @@ footer .footer-logo img { height: 32px; filter: brightness(0) invert(1); opacity
   pointer-events: none;
   user-select: none;
 }
+
+/* ── MOBILE HERO BUTTONS ── */
+@media (max-width: 600px) {
+  .hero-text .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 0.75rem;
+  }
+  .hero-text .fade-up div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .btn-secondary {
+    margin-left: 0;
+  }
+}
+
+.hero-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.hero-btn-group .btn-secondary {
+  margin-left: 0;
+}
+
+@media (max-width: 480px) {
+  .hero-btn-group {
+    flex-direction: column;
+  }
+  .hero-btn-group .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
