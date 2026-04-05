@@ -708,3 +708,7 @@ footer .footer-logo img { height: 32px; filter: brightness(0) invert(1); opacity
 body.ar .evil-eye-contact {
   text-align: right;
 }
+
+body.ar #evil-eye-contact {
+  text-align: right !important;
+}

@@ -61,3 +61,23 @@ document.querySelectorAll('.session-card, .value-item, .session-full-card, .expe
   el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
   observer.observe(el);
 });
+
+// ── EVIL EYE CONTACT ALIGNMENT ──
+function updateEvilEye() {
+  const el = document.getElementById('evil-eye-contact');
+  if (!el) return;
+  el.style.textAlign = document.body.classList.contains('ar') ? 'right' : 'left';
+}
+
+// Run on load and on toggle
+updateEvilEye();
+const origSetLang = setLang;
+// Patch setLang to also update evil eye
+const _origToggle = langToggle.onclick;
+langToggle.addEventListener('click', () => {
+  setTimeout(updateEvilEye, 10);
+});
+
+// Also run on page load after lang restored
+document.addEventListener('DOMContentLoaded', updateEvilEye);
+setTimeout(updateEvilEye, 100);
