@@ -727,3 +727,64 @@ body.ar .philosophy-quote-ar {
   padding-right: 2rem;
   padding-left: 0;
 }
+
+/* ── FULL WIDTH BUTTONS ON MOBILE ── */
+@media (max-width: 768px) {
+  .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  /* Ensure btn groups stack and fill width */
+  .hero-btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-btn-group .btn {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  /* Session cards, CTA, and standalone buttons */
+  .session-card .btn,
+  .session-full-card .btn,
+  .about-bio-text .btn,
+  .what-to-expect .btn {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  /* Who This Is For closing strip button */
+  .philosophy .btn,
+  section .btn {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  /* Override inline flex on closing strip */
+  [style*="justify-content:space-between"] {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+
+  [style*="justify-content:space-between"] .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ── MOTIFS STRIP — 4 icons on one line on mobile ── */
+@media (max-width: 600px) {
+  .motifs-strip-inner {
+    gap: 1rem !important;
+  }
+
+  .motifs-strip-inner img {
+    height: 40px !important;
+  }
+}
