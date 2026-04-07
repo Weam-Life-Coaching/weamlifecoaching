@@ -118,6 +118,7 @@
   <p class="footer-copy">© 2026 Weam Life Coaching · <a href="mailto:weam@weamlifecoaching.com" style="color:var(--lavender);text-decoration:none;">weam@weamlifecoaching.com</a></p>
 </footer>
 
+
 <script src="script.js"></script>
 <script>
 function handleSubmit() {
@@ -125,7 +126,11 @@ function handleSubmit() {
   const email = document.getElementById('email').value;
   const message = document.getElementById('message').value;
   const subject = encodeURIComponent('Message from ' + (name || 'your website'));
-  const body = encodeURIComponent((name ? 'Hi Wiam,\n\nMy name is ' + name + '.\n\n' : '') + message + (email ? '\n\nReply to: ' + email : ''));
+  const body = encodeURIComponent(
+    (name ? 'Hi Wiam,\n\nMy name is ' + name + '.\n\n' : '') +
+    message +
+    (email ? '\n\nReply to: ' + email : '')
+  );
   window.location.href = 'mailto:weam@weamlifecoaching.com?subject=' + subject + '&body=' + body;
 }
 </script>
